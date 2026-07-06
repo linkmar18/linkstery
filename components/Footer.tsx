@@ -59,7 +59,13 @@ export default function Footer() {
               href="/explorar#gratis"
               className="hover:text-red-500 transition-colors"
             >
-              Gratis / Online
+              Juegos Gratis
+            </Link>
+            <Link
+              href="/explorar#online-paga"
+              className="hover:text-red-500 transition-colors"
+            >
+              Online de Paga
             </Link>
           </div>
         </div>

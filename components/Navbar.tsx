@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu, X, Home, DollarSign, Gift } from "lucide-react";
+import { ChevronDown, Menu, X, Home, DollarSign, Gamepad2, Monitor } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const categories = [
@@ -20,10 +20,16 @@ const categories = [
     desc: "Experiencias físicas de alto nivel",
   },
   {
-    label: "Gratis",
-    href: "/explorar#gratis",
-    icon: <Gift size={18} />,
-    desc: "Demos y juegos online",
+    label: "Juegos Gratis",
+    href: "/explorar/gratis",
+    icon: <Gamepad2 size={18} />,
+    desc: "Juegos de navegador gratuitos",
+  },
+  {
+    label: "Online de Paga",
+    href: "/explorar#online-paga",
+    icon: <Monitor size={18} />,
+    desc: "Experiencias digitales premium",
   },
 ];
 

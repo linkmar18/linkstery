@@ -1,6 +1,6 @@
 "use client";
 
-import { Ghost, Home, DollarSign, Gift, ArrowRight } from "lucide-react";
+import { Ghost, Home, DollarSign, Gamepad2, Monitor, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Hero from "@/components/Hero";
@@ -22,11 +22,18 @@ const rooms = [
     features: ["Actores reales", "Realidad aumentada", "Alta tecnología"],
   },
   {
-    title: "Gratis / Online",
-    icon: <Gift size={28} />,
+    title: "Juegos Gratis",
+    icon: <Gamepad2 size={28} />,
     desc: "Pruébanos ahora mismo con nuestros juegos web.",
     href: "/explorar#gratis",
     features: ["Sin registro", "Multiplataforma", "Sin descargas"],
+  },
+  {
+    title: "Online de Paga",
+    icon: <Monitor size={28} />,
+    desc: "Experiencias digitales premium desde cualquier dispositivo.",
+    href: "/explorar#online-paga",
+    features: ["En vivo", "Alta producción", "Multijugador"],
   },
 ];
 
@@ -100,11 +107,11 @@ export default function HomePage() {
             Nuestras <span className="text-red-600">Modalidades</span>
           </h2>
           <p className="text-zinc-500 mt-4 max-w-xl mx-auto">
-            Tres formas de vivir el misterio. Elige tu experiencia.
+            Cuatro formas de vivir el misterio. Elige tu experiencia.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {rooms.map((room, i) => (
             <RoomCard
               key={room.title}

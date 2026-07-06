@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Home, DollarSign, Gift, Sparkles } from "lucide-react";
+import { Home, DollarSign, Gamepad2, Monitor, Sparkles } from "lucide-react";
 import RoomCard from "@/components/RoomCard";
 
 const rooms = [
@@ -26,12 +26,21 @@ const rooms = [
   },
   {
     id: "gratis",
-    category: "Gratis / Online",
-    icon: <Gift size={28} />,
+    category: "Juegos Gratis",
+    icon: <Gamepad2 size={28} />,
     description:
-      "Demos y juegos de navegador gratuitos. Pruébanos ahora mismo sin compromiso desde cualquier dispositivo.",
+      "Juegos de navegador gratuitos. Pruébanos ahora mismo sin compromiso desde cualquier dispositivo.",
     features: ["Sin registro", "Multiplataforma", "Actualizaciones semanales", "1-4 jugadores"],
-    gradient: "from-red-800/20 to-zinc-900",
+    gradient: "from-emerald-900/20 to-zinc-900",
+  },
+  {
+    id: "online-paga",
+    category: "Online de Paga",
+    icon: <Monitor size={28} />,
+    description:
+      "Experiencias digitales premium con game masters en vivo y producción de alta calidad desde tu hogar.",
+    features: ["Game master en vivo", "Producción profesional", "Multijugador", "60-90 min"],
+    gradient: "from-red-800/30 to-zinc-900",
   },
 ];
 
@@ -39,7 +48,8 @@ const filters = [
   { id: "all", label: "Todos" },
   { id: "domicilio", label: "A Domicilio" },
   { id: "premium", label: "Premium" },
-  { id: "gratis", label: "Gratis" },
+  { id: "gratis", label: "Juegos Gratis" },
+  { id: "online-paga", label: "Online de Paga" },
 ];
 
 export default function ExplorarPage() {
@@ -66,7 +76,7 @@ export default function ExplorarPage() {
             Explora nuestras <span className="text-red-600">modalidades</span>
           </h1>
           <p className="text-zinc-400 text-lg max-w-2xl">
-            Tres formas de vivir el misterio. Elige la que más se adapte a ti y
+            Cuatro formas de vivir el misterio. Elige la que más se adapte a ti y
             prepárate para desafiar tus límites.
           </p>
         </motion.div>
@@ -90,7 +100,7 @@ export default function ExplorarPage() {
         </div>
 
         {/* Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {filtered.map((room, i) => (
             <div key={room.id} id={room.id}>
               <RoomCard
@@ -130,7 +140,7 @@ export default function ExplorarPage() {
             onClick={() => setActiveFilter("gratis")}
             className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-bold transition-all"
           >
-            Probar un demo gratis
+            Probar Juegos Gratis
           </button>
         </motion.div>
       </section>
