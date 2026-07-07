@@ -20,8 +20,9 @@ export default function Pista2() {
             El mensaje del monitor
           </h1>
           <p className="text-zinc-400 text-lg leading-relaxed mb-8">
-            El monitor que parpadea muestra una secuencia: 1, 1, 0. No es una
-            coincidencia. El código de acceso está justo frente a tus ojos.
+            Si estoy en el piso 40 dice que lo multiplique por 4 y que eso
+            lo reste con la mitad de siglo que era 50. 
+            El código de acceso está justo frente a tus ojos.
           </p>
           <Link
             href="/juegos/oficinista/2"

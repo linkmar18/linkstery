@@ -20,11 +20,11 @@ export default function Pista1() {
             Revisa tu alrededor
           </h1>
           <p className="text-zinc-400 text-lg leading-relaxed mb-8">
-            Que curioso viendo el estado y el desgaste de de la maquina se ve 
-            que la palanca verde casi nunca se ha movido.
+            Una carpeta esta dañada pero si entro a las carpetas se puede ver cual carpeta
+            era antes que se dañara.
           </p>
           <Link
-            href="/juegos/oficinista/64"
+            href="/juegos/oficinista/maquinas"
             className="inline-flex items-center gap-2 text-red-600 hover:text-red-500 font-bold transition-colors"
           >
             <ArrowLeft size={18} /> Volver al acertijo

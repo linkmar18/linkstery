@@ -20,11 +20,11 @@ export default function Pista2() {
             El mensaje del monitor
           </h1>
           <p className="text-zinc-400 text-lg leading-relaxed mb-8">
-            El monitor que parpadea muestra una secuencia: 1, 1, 0. No es una
-            coincidencia. El código de acceso está justo frente a tus ojos.
+            En la guia de sistemas decia que tringulo era el segundo numero primo y que
+            circulo es el primer número primo.
           </p>
           <Link
-            href="/juegos/oficinista/2"
+            href="/juegos/oficinista/sistemas"
             className="inline-flex items-center gap-2 text-red-600 hover:text-red-500 font-bold transition-colors"
           >
             <ArrowLeft size={18} /> Volver al acertijo

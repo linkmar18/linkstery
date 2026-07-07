@@ -158,7 +158,7 @@ export default function Page2() {
         </div>
         <div className="flex flex-wrap gap-4">
           {[1, 2, 3].map((n) => (
-            <Link key={n} href={`/juegos/oficinista/sistemas/pista-${n}`} className="px-8 py-3 border border-zinc-800 rounded-full text-white text-sm font-bold hover:bg-zinc-900 hover:border-zinc-700 transition-all min-w-[120px] text-center">
+            <Link key={n} href={`/juegos/oficinista/15O/pista-${n}`} className="px-8 py-3 border border-zinc-800 rounded-full text-white text-sm font-bold hover:bg-zinc-900 hover:border-zinc-700 transition-all min-w-[120px] text-center">
               Pista {n}
             </Link>
           ))}

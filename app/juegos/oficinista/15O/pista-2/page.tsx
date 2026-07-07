@@ -20,11 +20,11 @@ export default function Pista2() {
             El mensaje del monitor
           </h1>
           <p className="text-zinc-400 text-lg leading-relaxed mb-8">
-            El monitor que parpadea muestra una secuencia: 1, 1, 0. No es una
-            coincidencia. El código de acceso está justo frente a tus ojos.
+            Te das cuenta que la operación matematica es la multiplicación por 2 
+            del resultado anterior.
           </p>
           <Link
-            href="/juegos/oficinista/2"
+            href="/juegos/oficinista/15O"
             className="inline-flex items-center gap-2 text-red-600 hover:text-red-500 font-bold transition-colors"
           >
             <ArrowLeft size={18} /> Volver al acertijo

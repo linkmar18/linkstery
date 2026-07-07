@@ -169,19 +169,19 @@ export default function Page2() {
             </div>
             <div className="flex flex-wrap gap-3">
               <Link
-                href="/juegos/oficinista/2/pista-1"
+                href="/juegos/oficinista/110/pista-1"
                 className="px-5 py-2.5 rounded-full border border-zinc-700 text-zinc-400 hover:border-red-600 hover:text-red-500 text-sm font-bold transition-all"
               >
                 Pista 1
               </Link>
               <Link
-                href="/juegos/oficinista/2/pista-2"
+                href="/juegos/oficinista/110/pista-2"
                 className="px-5 py-2.5 rounded-full border border-zinc-700 text-zinc-400 hover:border-red-600 hover:text-red-500 text-sm font-bold transition-all"
               >
                 Pista 2
               </Link>
               <Link
-                href="/juegos/oficinista/2/pista-3"
+                href="/juegos/oficinista/110/pista-3"
                 className="px-5 py-2.5 rounded-full border border-zinc-700 text-zinc-400 hover:border-red-600 hover:text-red-500 text-sm font-bold transition-all"
               >
                 Pista 3

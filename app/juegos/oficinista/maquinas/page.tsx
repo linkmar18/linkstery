@@ -79,7 +79,7 @@ export default function Page2() {
       </p>
 
       <p className="text-zinc-300 max-w-2xl mb-12 text-lg leading-relaxed">
-        El panel muestra cuatro módulos de presión: Alpha, Beta, Gamma y Delta. Kimberly debe encontrar 
+        El panel muestra cuatro módulos de presión auque una esta dañada: /@#$_, Beta, Gamma y Delta. Kimberly debe encontrar 
         el valor del módulo Beta para liberar el vapor. El sistema le da las siguientes pistas:
       </p>
 
@@ -214,7 +214,7 @@ export default function Page2() {
         </div>
         <div className="flex flex-wrap gap-4">
           {[1, 2, 3].map((n) => (
-            <Link key={n} href={`/juegos/oficinista/sistemas/pista-${n}`} className="px-8 py-3 border border-zinc-800 rounded-full text-white text-sm font-bold hover:bg-zinc-900 hover:border-zinc-700 transition-all min-w-[120px] text-center">
+            <Link key={n} href={`/juegos/oficinista/maquinas/pista-${n}`} className="px-8 py-3 border border-zinc-800 rounded-full text-white text-sm font-bold hover:bg-zinc-900 hover:border-zinc-700 transition-all min-w-[120px] text-center">
               Pista {n}
             </Link>
           ))}

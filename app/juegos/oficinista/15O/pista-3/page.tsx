@@ -20,11 +20,11 @@ export default function Pista3() {
             Respuesta directa
           </h1>
           <p className="text-zinc-400 text-lg leading-relaxed mb-8">
-            El código es <span className="text-red-600 font-black text-2xl">110</span>.
+            El código es <span className="text-red-600 font-black text-2xl">64</span>.
             Ingresa esos tres dígitos en el terminal para desbloquear el sistema.
           </p>
           <Link
-            href="/juegos/oficinista/2"
+            href="/juegos/oficinista/15O"
             className="inline-flex items-center gap-2 text-red-600 hover:text-red-500 font-bold transition-colors"
           >
             <ArrowLeft size={18} /> Volver al acertijo

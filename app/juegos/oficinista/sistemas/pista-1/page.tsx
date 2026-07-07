@@ -20,12 +20,11 @@ export default function Pista1() {
             Revisa tu alrededor
           </h1>
           <p className="text-zinc-400 text-lg leading-relaxed mb-8">
-            Busca entre los papeles del escritorio. Hay una nota con números
-            escritos a mano. Parecen fechas, pero tal vez el último dígito de
-            cada fecha sea importante.
+            Me acuerdo que mencionaban uno de los archivos, el valor del triangulo puede valer
+            entre 1:3, ya solo me falta saber las demas figuras.
           </p>
           <Link
-            href="/juegos/oficinista/2"
+            href="/juegos/oficinista/sistemas"
             className="inline-flex items-center gap-2 text-red-600 hover:text-red-500 font-bold transition-colors"
           >
             <ArrowLeft size={18} /> Volver al acertijo

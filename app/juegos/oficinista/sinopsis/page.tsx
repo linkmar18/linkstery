@@ -44,7 +44,8 @@ export default function SinopsisPage() {
             Este escape room no tiene restricciones. Puedes utilizar una calculadora,
             un cuaderno, lápiz o cualquier herramienta que te ayude a resolver 
             los desafíos. Si algún acertijo resulta demasiado complicado, también 
-            eres libre de consultar páginas web para buscar pistas o descifrar códigos.
+            eres libre de consultar páginas web para descifrar o códigos
+            de nuestras <span className="text-green-600 font-black text-2xl">pistas</span>.
           </p>
 
           <p className="text-zinc-400 text-lg leading-relaxed mb-8 text-left">

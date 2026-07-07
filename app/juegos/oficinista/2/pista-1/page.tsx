@@ -21,8 +21,8 @@ export default function Pista1() {
           </h1>
           <p className="text-zinc-400 text-lg leading-relaxed mb-8">
             Busca entre los papeles del escritorio. Hay una nota con números
-            escritos a mano. Parecen fechas, pero tal vez el último dígito de
-            cada fecha sea importante.
+            escritos a mano. Parecen que dice algo del piso 40, los 4 lados del cuadrado
+            y la mitaad de un siglo que es 50.
           </p>
           <Link
             href="/juegos/oficinista/2"

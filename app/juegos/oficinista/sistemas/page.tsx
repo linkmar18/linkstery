@@ -7,9 +7,9 @@ import Link from "next/link";
 
 // --- CONFIGURACIÓN DE TEXTOS EDITABLES ---
 const SHAPE_DATA = {
-  circle: "te",
-  triangle: "tetable",
-  square: "texle"
+  circle: "no es un valor impar",
+  triangle: "vale el doble que el Círculo.",
+  square: "vale lo que el Triángulo menos 1"
 };
 
 const CORRECT_ANSWER = "234";
@@ -31,13 +31,15 @@ export default function PaginaOficinista() {
   const checkCollision = (point: { x: number; y: number }) => {
     if (!scannerRef.current) return false;
     const rect = scannerRef.current.getBoundingClientRect();
-    
-    // Añadimos un pequeño margen de error (10px) para que sea más fácil de detectar
+  
+    // Padding de 80 hace que sea casi imposible fallar
+    const padding = 330; 
+
     return (
-      point.x >= rect.left - 10 &&
-      point.x <= rect.right + 10 &&
-      point.y >= rect.top - 10 &&
-      point.y <= rect.bottom + 10
+      point.x >= rect.left - padding &&
+      point.x <= rect.right + padding &&
+      point.y >= rect.top - padding &&
+      point.y <= rect.bottom + padding
     );
   };
 
@@ -66,7 +68,7 @@ export default function PaginaOficinista() {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">Código aceptado</h2>
           <p className="text-zinc-400 text-lg md:text-xl mb-12 max-w-md leading-relaxed">El sistema se desbloquea. Una puerta oculta se revela frente a ti...</p>
-          <Link href="/juegos/oficinista/modelo/0420" className="group bg-red-600 hover:bg-red-700 text-white px-12 py-4 rounded-full text-lg font-bold flex items-center gap-3 transition-all shadow-[0_0_30px_rgba(220,38,38,0.4)] hover:shadow-[0_0_40px_rgba(220,38,38,0.6)]">
+          <Link href="/juegos/oficinista/234" className="group bg-red-600 hover:bg-red-700 text-white px-12 py-4 rounded-full text-lg font-bold flex items-center gap-3 transition-all shadow-[0_0_30px_rgba(220,38,38,0.4)] hover:shadow-[0_0_40px_rgba(220,38,38,0.6)]">
             Continuar <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>
@@ -78,10 +80,25 @@ export default function PaginaOficinista() {
     <div className="min-h-screen bg-[#050505] flex flex-col items-center px-4 py-16 font-sans selection:bg-cyan-500/30">
       
       {/* 1. TITULO */}
-      <h1 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tight text-center">titulo</h1>
+      <h1 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tight text-center">
+        Qué rayos es un decaedro?
+      </h1>
 
       {/* 2. TEXTO DE LA HISTORIA */}
-      <p className="text-zinc-300 text-center max-w-2xl mb-12 text-lg leading-relaxed">aqui va estar el texto de la historia</p>
+      <p className="text-zinc-300 max-w-2xl mb-12 text-lg leading-relaxed">
+        Kimberly llega al piso 15, el corazón digital del edificio. El vapor ha activado algunas alarmas silenciosas, 
+        pero ella sabe que los ladrones ya tienen el control del sistema principal. Para evitar ser flanqueada, debe 
+        atravesar un pasillo de alta seguridad con paredes de cristal templado. El problema es que las puertas de cristal 
+        se han bloqueado en "Modo de Intrusión". Kimberly encuentra una terminal de mantenimiento oculta en un panel de 
+        pared. Recuerda los documentos del jefe: "En el piso 15, la seguridad se basa en la geometría del hardware". 
+        Para abrir las puertas y seguir bajando, debe resolver un pequeño acertijo lógico que equilibra la carga de 
+        los servidores
+      </p>
+
+      <p className="text-zinc-300  max-w-2xl mb-12 text-lg leading-relaxed">
+        El panel muestra tres iconos: un Círculo, un Cuadrado y un Triángulo. Cada uno representa un valor numérico que, 
+        al sumarse, permite el acceso.
+      </p>
 
       {/* 3. DISEÑO VISUAL / INTERACTIVIDAD */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-4xl bg-[#0a0f16]/80 border border-cyan-900/30 rounded-xl overflow-hidden shadow-2xl flex flex-col mb-16">
@@ -123,18 +140,18 @@ export default function PaginaOficinista() {
             <div 
               ref={scannerRef} 
               className={`
-                flex-1 border-2 border-dashed rounded-2xl relative flex flex-col items-center justify-center transition-all duration-300
-                ${isOverScanner ? "border-cyan-400 bg-cyan-500/10 shadow-[0_0_20px_rgba(6,182,212,0.2)]" : "border-cyan-900/30 bg-black/40"}
+                flex-1 border-2 border-dashed rounded-2xl relative flex flex-col items-center justify-center transition-all duration-300 min-h-[250px]
+                ${isOverScanner ? "border-cyan-400 bg-cyan-500/20 shadow-[0_0_30px_rgba(6,182,212,0.3)] scale-[1.02]" : "border-cyan-900/30 bg-black/40"}
               `}
             >
-              <Scan size={48} className={`transition-colors duration-300 ${isOverScanner ? "text-cyan-400" : "text-cyan-900"}`} />
+              <Scan size={60} className={`transition-colors duration-300 ${isOverScanner ? "text-cyan-400" : "text-cyan-900"}`} />
               <span className={`text-[10px] font-mono uppercase tracking-widest mt-2 ${isOverScanner ? "text-cyan-400" : "text-cyan-900"}`}>
                 {isOverScanner ? "OBJETO DETECTADO" : "ZONA DE ESCANEO"}
               </span>
               <motion.div animate={{ top: ["0%", "100%", "0%"] }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }} className="absolute left-0 right-0 h-[1px] bg-cyan-500/20" />
             </div>
             
-            <div className="h-32 bg-black/60 border border-cyan-900/30 p-6 rounded-xl font-mono text-xs text-cyan-100/70 uppercase leading-relaxed shadow-inner">
+            <div className="h-32 bg-black/60 border border-cyan-900/30 p-6 rounded-xl font-mono text-xs text-cyan-100/70 uppercase">
               {analysisText}
             </div>
           </div>
@@ -149,13 +166,21 @@ export default function PaginaOficinista() {
       </motion.div>
 
       {/* 5. BOTONES DE PISTA */}
-      <div className="w-full max-w-4xl pt-8 border-t border-zinc-800/60">
+      {/* 5. BOTONES DE PISTA (CON EFECTO HOVER ROJO) */}
+      <div className="w-full max-w-4xl pt-8 border-t border-zinc-800/60 text-left">
         <div className="flex items-center gap-3 mb-6 font-bold text-zinc-500 text-sm uppercase tracking-widest">
-          <Lightbulb size={20} className="text-red-600 fill-red-600/10" /> ¿Necesitas ayuda?
+          {/* Icono de la bombilla en rojo */}
+          <Lightbulb size={20} className="text-red-600 fill-red-600/10" /> 
+          ¿Necesitas ayuda?
         </div>
+  
         <div className="flex flex-wrap gap-4">
           {[1, 2, 3].map((n) => (
-            <Link key={n} href={`/juegos/oficinista/sistemas/pista-${n}`} className="px-8 py-3 border border-zinc-800 rounded-full text-white text-sm font-bold hover:bg-zinc-900 hover:border-zinc-700 transition-all min-w-[120px] text-center">
+            <Link 
+              key={n} 
+              href={`/juegos/oficinista/sistemas/pista-${n}`} 
+              className="px-8 py-3 bg-transparent border border-zinc-800 rounded-full text-white text-sm font-bold transition-all min-w-[120px] text-center hover:border-red-600 hover:text-red-600 active:scale-95"
+            >
               Pista {n}
             </Link>
           ))}
